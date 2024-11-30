@@ -4,7 +4,7 @@ import { FaRegUser } from "react-icons/fa";
 const Header = () => {
   return (
     <div>
-      <div className="bg-transparent bg-[#EFF4F7] text-black text-base px-10 py-2 m-0 border-none font-sans font-normal text-left flex items-center justify-center">
+      <div className=" bg-[#EFF4F7] text-black text-base px-10 py-2 m-0 border-none font-sans font-normal text-left flex items-center justify-center">
         <p className=" text-xs ">
           Get 5% off on First Order | Code:{" "}
           <b>
@@ -41,8 +41,10 @@ const Header = () => {
             className="w-[250px] bg-[#EFF4F7] placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-full pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
             placeholder="Products, Items..."
           />
+          <a href="/login">
+            <FaRegUser size={25} />
+          </a>
 
-          <FaRegUser size={25} />
           <GiShoppingBag size={25} />
         </div>
       </div>
