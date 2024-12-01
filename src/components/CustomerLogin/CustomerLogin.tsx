@@ -1,7 +1,7 @@
 import { FormEvent, useContext, useState } from "react";
 import { authenticateCustomer } from "../../services/Customer.service";
 import { customerContext } from "../../contextAPI/customer/customerContextProvider";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { enqueueSnackbar } from "notistack";
 
 const CustomerLogin = () => {
@@ -9,7 +9,7 @@ const CustomerLogin = () => {
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
-  const { setIsLoggedIn, setUserId, setCartId, cartId } =
+  const { setIsLoggedIn, setUserId, setCartId, cartId, setRole } =
     useContext(customerContext);
 
   const handleSubmit = async (e: FormEvent) => {
@@ -20,11 +20,12 @@ const CustomerLogin = () => {
       return;
     }
     try {
-      const res = await authenticateCustomer(email, password);
+      const customer = await authenticateCustomer(email, password);
 
       setIsLoggedIn(true);
-      setUserId(res.id || "");
-      setCartId(res.cartId || undefined);
+      setUserId(customer.id || "");
+      setCartId(customer.cartId || undefined);
+      setRole("Customer");
       navigate("/");
     } catch (error: unknown) {
       const errorMessage =
@@ -95,9 +96,9 @@ const CustomerLogin = () => {
             <label className="text-green-900 ml-2">Remember Me</label>
           </div>
           <div className="mb-6 text-blue-500">
-            <a href="/adminLogin" className="hover:underline">
+            <Link to="/admin/login" className="hover:underline">
               Login as an Admin.
-            </a>
+            </Link>
           </div>
           <button
             type="submit"
@@ -107,9 +108,9 @@ const CustomerLogin = () => {
           </button>
         </form>
         <div className="mt-6 text-green-500 text-center">
-          <a href="/signup" className="hover:underline">
+          <Link to="/signup" className="hover:underline">
             Sign up Here
-          </a>
+          </Link>
         </div>
       </div>
     </div>

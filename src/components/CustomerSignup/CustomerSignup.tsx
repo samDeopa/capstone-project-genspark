@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { registerCustomer } from "../../services/Customer.service";
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router";
 
 // const API_ENDPOINT = `${config.BASE_URL}/customers`;
 
@@ -28,9 +29,10 @@ const CustomerSignup = () => {
       const response = await registerCustomer({
         id: uuidv4(),
         name: `${data.firstName} ${data.lastName}`,
-        addressId: [],
+        addressIds: [],
         password: data.password,
         cartId: "",
+        orderIds: [],
         email: data.email,
         phoneNumber: data.phoneNumber + "",
         createdAt: currdate.toISOString(),
@@ -175,9 +177,9 @@ const CustomerSignup = () => {
           </button>
         </form>
         <div className="mt-6 text-center">
-          <a href="/login" className="text-blue-500 hover:underline">
+          <Link to="/login" className="text-blue-500 hover:underline">
             Already have an account? Login Here
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        metropolis: ["Metropolis", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

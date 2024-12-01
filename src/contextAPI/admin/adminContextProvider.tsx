@@ -1,58 +1,69 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
+import { useNavigate } from "react-router";
 
-interface ContextType {
+interface AdminContextType {
   isLoggedIn: boolean;
   userId: string;
-  cartId?: string;
   role: string;
+  accessLevel: number;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
   setUserId: React.Dispatch<React.SetStateAction<string>>;
-  setCartId: React.Dispatch<React.SetStateAction<string | undefined>>;
+  setAccessLevel: React.Dispatch<React.SetStateAction<number>>;
   setRole: React.Dispatch<React.SetStateAction<string>>;
   logout: () => void;
 }
-export const customerContext = createContext<ContextType>({
+
+const AdminContext = createContext<AdminContextType>({
   isLoggedIn: false,
   userId: "",
-  cartId: "",
   role: "",
+  accessLevel: 0,
   setIsLoggedIn: () => {},
   setUserId: () => {},
-  setCartId: () => {},
+  setAccessLevel: () => {},
   setRole: () => {},
   logout: () => {},
 });
 
-export const CustomerProvider: React.FC<{ children: React.ReactNode }> = ({
+export const AdminProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState("");
-  const [cartId, setCartId] = useState<string | undefined>(undefined);
+  const [accessLevel, setAccessLevel] = useState<number>(0);
   const [role, setRole] = useState("");
 
   const logout = (): void => {
     setIsLoggedIn(false);
     setUserId("");
-    setCartId(undefined);
+    setAccessLevel(0);
     setRole("");
   };
 
   return (
-    <customerContext.Provider
+    <AdminContext.Provider
       value={{
         isLoggedIn,
         userId,
-        cartId,
+        accessLevel,
         role,
         setIsLoggedIn,
         setUserId,
-        setCartId,
+        setAccessLevel,
         setRole,
         logout,
       }}
     >
       {children}
-    </customerContext.Provider>
+    </AdminContext.Provider>
   );
+};
+
+export const useAdminContext = (): AdminContextType => {
+  const context = useContext(AdminContext);
+  if (!context) {
+    throw new Error("useAdminContext must be used within an admin layout");
+  }
+  return context;
 };

@@ -1,9 +1,10 @@
 import { GiShoppingBag } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
-    <div>
+    <div className="border-[#EFF4F7] border-b-2">
       <div className=" bg-[#EFF4F7] text-black text-base px-10 py-2 m-0 border-none font-sans font-normal text-left flex items-center justify-center">
         <p className=" text-xs ">
           Get 5% off on First Order | Code:{" "}
@@ -19,7 +20,9 @@ const Header = () => {
         <div className=" flex">
           <img className="h-[34px] w-[85px]" src="logo.png" alt="" />{" "}
           <div className="flex gap-10 ml-20 text-[16px] font-light text-slate-700 justify-center items-center">
-            <p className="h-min">Products</p>
+            <Link to="/products" className="h-min">
+              Products
+            </Link>
             <p className="h-min">EarPhones</p>
             <p className="h-min">Speakers</p>
           </div>
@@ -41,9 +44,9 @@ const Header = () => {
             className="w-[250px] bg-[#EFF4F7] placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-full pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
             placeholder="Products, Items..."
           />
-          <a href="/login">
+          <Link to="/login">
             <FaRegUser size={25} />
-          </a>
+          </Link>
 
           <GiShoppingBag size={25} />
         </div>
