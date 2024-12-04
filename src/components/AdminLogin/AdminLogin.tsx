@@ -20,12 +20,13 @@ const AdminLogin = () => {
     }
     try {
       const admin = await authenticateAdmin(username, password);
-
+      console.log(admin);
       setIsLoggedIn(true);
       setUserId(admin.id);
       setAccessLevel(admin.accessLevel);
       setRole("Admin");
-      navigate("../dashboard");
+      navigate("../home");
+      console.log(admin);
       enqueueSnackbar("Logged in successfully", { variant: "success" });
     } catch (error: unknown) {
       const errorMessage =

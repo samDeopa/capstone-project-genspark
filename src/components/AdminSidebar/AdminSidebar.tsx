@@ -1,6 +1,14 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
+import { useAdminContext } from "../../contextAPI/admin/adminContextProvider";
 
 const AdminSidebar = () => {
+  const { setIsLoggedIn, setUserId } = useAdminContext();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUserId("");
+    navigate("../login");
+  };
   return (
     <div className="h-screen w-64 bg-gray-800 text-white flex flex-col">
       <div className="p-4 text-2xl font-bold border-b border-gray-700">
@@ -27,7 +35,7 @@ const AdminSidebar = () => {
         >
           Manage Customers
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/admin/orders"
           className={({ isActive }) =>
             `px-4 py-2 text-sm font-medium ${
@@ -36,7 +44,7 @@ const AdminSidebar = () => {
           }
         >
           Manage Orders
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/admin/products"
           className={({ isActive }) =>
@@ -47,7 +55,7 @@ const AdminSidebar = () => {
         >
           Products
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/admin/reports"
           className={({ isActive }) =>
             `px-4 py-2 text-sm font-medium ${
@@ -56,8 +64,8 @@ const AdminSidebar = () => {
           }
         >
           Reports
-        </NavLink>
-        <NavLink
+        </NavLink> */}
+        {/* <NavLink
           to="/admin/settings"
           className={({ isActive }) =>
             `px-4 py-2 text-sm font-medium ${
@@ -66,10 +74,13 @@ const AdminSidebar = () => {
           }
         >
           Settings
-        </NavLink>
+        </NavLink> */}
       </nav>
       <div className="mt-auto p-4">
-        <button className="w-full bg-red-600 hover:bg-red-500 text-white font-medium py-2 px-4 rounded">
+        <button
+          className="w-full bg-red-600 hover:bg-red-500 text-white font-medium py-2 px-4 rounded"
+          onClick={handleLogout}
+        >
           Logout
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { FormEvent, useContext, useState } from "react";
 import { authenticateCustomer } from "../../services/Customer.service";
 import { customerContext } from "../../contextAPI/customer/customerContextProvider";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { enqueueSnackbar } from "notistack";
 
 const CustomerLogin = () => {
@@ -26,6 +26,7 @@ const CustomerLogin = () => {
       setUserId(customer.id || "");
       setCartId(customer.cartId || undefined);
       setRole("Customer");
+      enqueueSnackbar("Logged in Successfully", { variant: "success" });
       navigate("/");
     } catch (error: unknown) {
       const errorMessage =
@@ -95,11 +96,7 @@ const CustomerLogin = () => {
             />
             <label className="text-green-900 ml-2">Remember Me</label>
           </div>
-          <div className="mb-6 text-blue-500">
-            <Link to="/admin/login" className="hover:underline">
-              Login as an Admin.
-            </Link>
-          </div>
+
           <button
             type="submit"
             className="bg-red-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full"

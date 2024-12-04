@@ -1,26 +1,31 @@
+import { Link } from "react-router";
 import Product from "../../models/Product.model";
 
 interface Props {
   wide: boolean;
   product: Product;
+  addToCart: (productId: string) => void;
 }
 
-const ProductCard: React.FC<Props> = ({ wide, product }) => {
+const ProductCard: React.FC<Props> = ({ wide, product, addToCart }) => {
   return wide ? (
     <div className="w-[440px] h-[192px]  flex  bg-[#FAFAFA]  rounded-md border-solid border-[1px] border-[#e9e5e5]  px-2 py-2 gap-3  ">
-      <div>
-        <img
-          src={product.images[0]}
-          alt=""
-          className="h-[150px] w-[160px] rounded-t-md "
-        />
-        <div className="text-[10px] font-bold  bg-[#FBC509] rounded-b-lg px-[10px] py-[4px]">
-          {product.features[0]}
+      <Link to={`/product?id=${product.id}`}>
+        <div>
+          <img
+            src={product.images[0]}
+            alt=""
+            className="h-[150px] w-[160px] rounded-t-md "
+          />
+          <div className="text-[10px] font-bold  bg-[#FBC509] rounded-b-lg px-[10px] py-[4px]">
+            {product.features[0]}
+          </div>
         </div>
-      </div>
+      </Link>
       <div className="flex flex-col gap-2 w-full justify-between p-2 ">
-        <p className="text-[14px]  font-semibold px-2    ">{product.name}</p>
-
+        <Link to={`/product?id=${product.id}`}>
+          <p className="text-[14px]  font-semibold px-2    ">{product.name}</p>
+        </Link>
         <div className="flex flex-col  self-start px-2 gap-1 ">
           <div className="flex items-center gap-1 ">
             <span className="font-bold">
@@ -43,25 +48,34 @@ const ProductCard: React.FC<Props> = ({ wide, product }) => {
           </div>
         </div>
 
-        <button className="w-full bg-black text-white h-10 rounded-lg">
+        <button
+          className="w-full bg-black text-white h-10 rounded-lg"
+          onClick={() => {
+            addToCart(product.id);
+          }}
+        >
           Add to cart
         </button>
       </div>
     </div>
   ) : (
     <div className="w-[216px] h-[350px] flex flex-col bg-[#FAFAFA]  rounded-md border-solid border-[1px] border-[#e9e5e5] gap-3  ">
-      <div>
-        <img
-          src={product.images[0]}
-          alt=""
-          className="h-[200px] w-[216px] rounded-t-md "
-        />
-        <div className="text-[10px] font-bold  bg-[#FBC509] rounded-b-lg px-[10px] py-[6px]">
-          {product.features[0]}
+      <Link to={`/product?id=${product.id}`}>
+        <div>
+          <img
+            src={product.images[0]}
+            alt=""
+            className="h-[200px] w-[216px] rounded-t-md "
+          />
+          <div className="text-[10px] font-bold  bg-[#FBC509] rounded-b-lg px-[10px] py-[6px]">
+            {product.features[0]}
+          </div>
         </div>
-      </div>
+      </Link>
       <div className="flex flex-col gap-2 ">
-        <p className="text-[14px]  font-semibold px-2    ">{product.name}</p>
+        <Link to={`/product?id=${product.id}`}>
+          <p className="text-[14px]  font-semibold px-2    ">{product.name}</p>
+        </Link>
         <hr className="border-t-2 border-dashed w-[80%] self-center " />
         <div className="flex flex-col self-start px-2 ">
           <span className="font-bold">

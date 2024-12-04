@@ -1,7 +1,7 @@
 import Product from "../models/Product.model";
 import axios from "axios";
 import { config } from "../utils/config";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
 
 const API_ENDPOINT: string | undefined = `${config.BASE_URL}/products`;
 
@@ -44,7 +44,7 @@ export const addNewProduct = async (
     const timestamp = new Date().toISOString();
     const newProduct: Product = {
       ...product,
-      id: uuidv4(),
+      id: uuid(),
       createdAt: timestamp,
       updatedAt: timestamp,
     };

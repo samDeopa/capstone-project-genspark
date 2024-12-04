@@ -5,19 +5,7 @@ import {
   fetchAllCustomers,
   removeCustomer,
 } from "../../services/Customer.service";
-
-interface Customer {
-  id: string;
-  name: string;
-  addressIds: string[];
-  password: string;
-  cartId: string;
-  orderIds: string[];
-  email: string;
-  phoneNumber: string;
-  createdAt: string;
-  updatedAt: string;
-}
+import Customer from "../../models/Customer.model";
 
 const CustomerManagement: React.FC = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);
@@ -121,12 +109,12 @@ const CustomerManagement: React.FC = () => {
                     <td className="py-2 px-4">{customer.email}</td>
                     <td className="py-2 px-4">{customer.phoneNumber}</td>
                     <td className="py-2 px-4 flex space-x-2">
-                      <button
+                      {/* <button
                         onClick={() => handleEdit(customer)}
                         className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
                       >
                         Edit
-                      </button>
+                      </button> */}
                       <button
                         onClick={() => handleDelete(customer.id)}
                         className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"

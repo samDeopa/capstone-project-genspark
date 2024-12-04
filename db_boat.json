@@ -13,8 +13,8 @@
     {
       "id": "prod001",
       "name": "Airdopes 1412",
-      "description": "Wireless Earbuds with 42 Hours Playback, ENx™ Technology, BEAST™️ Mode.",
-      "price": 1300.99,
+      "description": "Wireless Earbuds with 42 Hours Playback, ENx™ Technology, BEAST™️ Modes.",
+      "price": 1300,
       "discount": 10,
       "category": "Earphones",
       "subCategory": [
@@ -24,7 +24,10 @@
       ],
       "stock": 50,
       "images": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_141.png?v=1703145765"
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_141.png?v=1703145765",
+        "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White06_600x.jpg?v=1722247855",
+        "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White02_600x.jpg?v=1722247855",
+        "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White03_600x.jpg?v=1722247855"
       ],
       "ratings": {
         "average": 4.5,
@@ -32,17 +35,17 @@
       },
       "features": [
         "Noise Canceling",
-        " Bluetooth 5.0",
-        " 30 Hours Battery"
+        "  Bluetooth 5.0",
+        "  30 Hours Battery"
       ],
-      "createdAt": "2024-12-01T15:42:12.537Z",
-      "updatedAt": "2024-12-01T15:42:12.537Z"
+      "createdAt": "2024-12-04T03:19:00.573Z",
+      "updatedAt": "2024-12-04T03:19:00.574Z"
     },
     {
       "id": "prod002",
       "name": "Airdopes 71",
       "description": "Wireless Earbuds with 40 Hours Playback, BEAST™ Mode, ENx™ Technology, Dual Mic with ENx™ Technology",
-      "price": 1300.99,
+      "price": 1300,
       "discount": 10,
       "category": "Earphones",
       "subCategory": [
@@ -71,7 +74,7 @@
       "id": "prod003",
       "name": "Airdopes 800",
       "description": "Wireless Earbuds with 40 Hours Playback,Dolby Audio, BEAST™ Mode, ASAP™ Charge, ENx™ Technology.",
-      "price": 1300.99,
+      "price": 1200,
       "discount": 10,
       "category": "Earphones",
       "subCategory": [
@@ -99,7 +102,7 @@
       "id": "prod004",
       "name": "Airdopes 131",
       "description": "Wireless Earbuds with upto 60 Hours Playback, 13mm Drivers, IWP Technology, 650mAh Charging Case",
-      "price": 1300.99,
+      "price": 1400,
       "discount": 10,
       "category": "Earphones",
       "subCategory": [
@@ -128,7 +131,7 @@
       "id": "prod005",
       "name": "Airdopes 161",
       "description": "Wireless Earbuds with Massive Playback of upto 40 Hours, IPX5 Water & Sweat Resistance, IWP Technology, Type C Interface.",
-      "price": 1300.99,
+      "price": 1111,
       "discount": 10,
       "category": "Earphones",
       "subCategory": [
@@ -157,7 +160,7 @@
       "id": "prod006",
       "name": "Rockerz 450 Pro",
       "description": "Wireless Headphone with 40mm Massive Drivers, Mountainous Playback Upto 70 Hours, Asap Charge",
-      "price": 1300.99,
+      "price": 1300,
       "discount": 10,
       "category": "Headphones",
       "subCategory": [
@@ -186,8 +189,8 @@
       "id": "prod007",
       "name": "Nirvana Eutopia",
       "description": "Wireless Headphone with 20H Playback, Dual Mics with ENx™ Tech, ASAP™ Charge.",
-      "price": 1300.99,
-      "discount": 10,
+      "price": 1800,
+      "discount": 20,
       "category": "Headphones",
       "subCategory": [
         "fitness, TWS",
@@ -216,8 +219,8 @@
       "id": "prod009",
       "name": "Stone 750",
       "description": "WirePortable Bluetooth Speaker with 12W RMS Stereo Sound, 12 Hours Playback, Bluetooth v5.0.",
-      "price": 1300.99,
-      "discount": 10,
+      "price": 1300,
+      "discount": 12,
       "category": "Speakers",
       "subCategory": [
         "Party, TWS",
@@ -318,19 +321,177 @@
     {
       "id": "4473bb40-0d60-439e-9c1c-4b42377f72e7",
       "name": "sameer chand",
-      "address": [],
+      "addressIds": [
+        {
+          "id": "str4473bb40-0d60-439e-9c1c-4b42377f72e9",
+          "address_line": "House No. 26",
+          "city": "Banbasa",
+          "state": "Uttarakhand",
+          "postalCode": "262310",
+          "country": "India"
+        },
+        {
+          "address_line": "House No.21 ",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "postalCode": "248002",
+          "country": "India",
+          "id": "adcd03b7-62a3-4a25-a4ab-71df70e8f8ac"
+        },
+        {
+          "address_line": "New Dehli",
+          "city": "Dehli",
+          "state": "Dehli",
+          "postalCode": "261234",
+          "country": "India",
+          "id": "ac6ec080-d429-452d-bc75-918ca5f1abb4"
+        }
+      ],
       "password": "$2a$05$1qknhfDGMKjCYgzGrbMIIuVhS0QV2TWbHzLLfkXa14xqnZuoxsoDu",
-      "cartId": "",
+      "cartId": "9daf55db-003a-45ca-81b8-2d50c0bf2367",
       "email": "sameer@gmail.com",
       "phoneNumber": "7456858123",
-      "orderIds": [],
+      "orderIds": [
+        {
+          "id": "09c0eb62-184c-4bf3-b6e8-8eba764731bd",
+          "order_date": "2024-12-03T19:08:13.487Z",
+          "total_amount": 5022,
+          "address_details": {
+            "id": "str4473bb40-0d60-439e-9c1c-4b42377f72e9",
+            "address_line": "House No. 26",
+            "city": "Banbasa",
+            "state": "Uttarakhand",
+            "postalCode": "262310",
+            "country": "India"
+          },
+          "products_ordered": [
+            {
+              "id": "prod004",
+              "product_count": 2,
+              "product_details": {
+                "id": "prod004",
+                "name": "Airdopes 131",
+                "description": "Wireless Earbuds with upto 60 Hours Playback, 13mm Drivers, IWP Technology, 650mAh Charging Case",
+                "price": 1400,
+                "discount": 10,
+                "category": "Earphones",
+                "subCategory": [
+                  "fitness, TWS",
+                  "Wireless"
+                ],
+                "stock": 11,
+                "images": [
+                  "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/131_f04f74fd-45d4-4614-85cf-6ccf69c4cf90.jpg?v=1691395049",
+                  "https://cdn.pixabay.com/photo/2016/12/06/09/31/headphones-1880727_960_720.jpg",
+                  "https://cdn.pixabay.com/photo/2017/01/10/02/07/black-and-white-1969750_960_720.jpg"
+                ],
+                "ratings": {
+                  "average": 4.5,
+                  "count": 1200
+                },
+                "features": [
+                  "Noise Canceling",
+                  "Bluetooth 5.0",
+                  "30 Hours Battery"
+                ],
+                "createdAt": "2023-10-01T12:00:00Z",
+                "updatedAt": "2023-11-01T14:00:00Z"
+              }
+            },
+            {
+              "id": "prod005",
+              "product_count": 2,
+              "product_details": {
+                "id": "prod005",
+                "name": "Airdopes 161",
+                "description": "Wireless Earbuds with Massive Playback of upto 40 Hours, IPX5 Water & Sweat Resistance, IWP Technology, Type C Interface.",
+                "price": 1111,
+                "discount": 10,
+                "category": "Earphones",
+                "subCategory": [
+                  "fitness, TWS",
+                  "Wireless"
+                ],
+                "stock": 11,
+                "images": [
+                  "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_161.jpg?v=1686297917",
+                  "https://cdn.pixabay.com/photo/2016/12/06/09/31/headphones-1880727_960_720.jpg",
+                  "https://cdn.pixabay.com/photo/2017/01/10/02/07/black-and-white-1969750_960_720.jpg"
+                ],
+                "ratings": {
+                  "average": 4.5,
+                  "count": 1200
+                },
+                "features": [
+                  "Noise Canceling",
+                  "Bluetooth 5.0",
+                  "30 Hours Battery"
+                ],
+                "createdAt": "2023-10-01T12:00:00Z",
+                "updatedAt": "2023-11-01T14:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91c0ff4c-bafd-4941-a612-753ecfc9dea3",
+          "order_date": "2024-12-04T06:19:29.491Z",
+          "total_amount": 0,
+          "address_details": {
+            "id": "str4473bb40-0d60-439e-9c1c-4b42377f72e9",
+            "address_line": "House No. 26",
+            "city": "Banbasa",
+            "state": "Uttarakhand",
+            "postalCode": "262310",
+            "country": "India"
+          },
+          "products_ordered": [
+            {
+              "id": "prod001",
+              "product_count": 3,
+              "product_details": {
+                "id": "prod001",
+                "name": "Airdopes 1412",
+                "description": "Wireless Earbuds with 42 Hours Playback, ENx™ Technology, BEAST™️ Modes.",
+                "price": 1300,
+                "discount": 10,
+                "category": "Earphones",
+                "subCategory": [
+                  "fitness",
+                  " TWS",
+                  "Wireless"
+                ],
+                "stock": 50,
+                "images": [
+                  "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_141.png?v=1703145765",
+                  "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White06_600x.jpg?v=1722247855",
+                  "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White02_600x.jpg?v=1722247855",
+                  "https://www.boat-lifestyle.com/cdn/shop/files/AD141-FI_White03_600x.jpg?v=1722247855"
+                ],
+                "ratings": {
+                  "average": 4.5,
+                  "count": 500
+                },
+                "features": [
+                  "Noise Canceling",
+                  "  Bluetooth 5.0",
+                  "  30 Hours Battery"
+                ],
+                "createdAt": "2024-12-04T03:19:00.573Z",
+                "updatedAt": "2024-12-04T03:19:00.574Z"
+              }
+            }
+          ]
+        }
+      ],
       "createdAt": "2024-11-29T06:00:52.456Z",
-      "updatedAt": "2024-11-29T06:00:52.456Z"
+      "updatedAt": "2024-11-29T06:00:52.456Z",
+      "cart": "9daf55db-003a-45ca-81b8-2d50c0bf2367"
     },
     {
       "id": "3e640ac7-c8a3-4bb9-aef4-c4c3ec820c97",
       "name": "Sameer Chand",
-      "address": [],
+      "addressIds": [],
       "password": "$2a$05$TmFUrgGwEwTWNJgybHbjqOiDdfgh/sWVvgYYeipJ36hqfa2ms1c/6",
       "cartId": "",
       "email": "sameer@sam.com",
@@ -338,6 +499,57 @@
       "orderIds": [],
       "createdAt": "2024-11-29T06:04:21.837Z",
       "updatedAt": "2024-11-29T06:04:21.837Z"
+    }
+  ],
+  "carts": [
+    {
+      "items": [],
+      "id": "9daf55db-003a-45ca-81b8-2d50c0bf2367"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "e9ea72f0-2b3a-4ad2-994d-47ed0c67f307"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "18ed51e1-0ebd-4c19-9c28-5e39b66fe672"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "a32f4c10-f147-4d31-99d8-76f072ab665f"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "af759049-37b3-474c-a865-9600b0f3c96c"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "1e5d45e6-9cd9-4652-96ea-dc1854acf660"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "9fe95cf1-2dfb-477f-b5c6-f78c21d0f44c"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "4ff28489-b1cd-466e-81c8-a2c213d1f758"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "77c6f1bb-a1d1-4e32-af15-455e922b9849"
+    },
+    {
+      "customerId": "",
+      "items": [],
+      "id": "1058b198-854f-4b33-af4c-386e0745215b"
     }
   ]
 }

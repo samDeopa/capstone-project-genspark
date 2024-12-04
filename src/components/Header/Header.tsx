@@ -2,7 +2,9 @@ import { GiShoppingBag } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router";
 
-const Header = () => {
+const Header: React.FC<{ setCartOpen: (cartOpen: boolean) => void }> = ({
+  setCartOpen,
+}) => {
   return (
     <div className="border-[#EFF4F7] border-b-2">
       <div className=" bg-[#EFF4F7] text-black text-base px-10 py-2 m-0 border-none font-sans font-normal text-left flex items-center justify-center">
@@ -18,17 +20,24 @@ const Header = () => {
       </div>
       <div className=" flex justify-between h-[85px] items-center  px-10">
         <div className=" flex">
-          <img className="h-[34px] w-[85px]" src="logo.png" alt="" />{" "}
+          <Link to="/">
+            <img className="h-[34px] w-[85px]" src="logo.png" alt="" />{" "}
+          </Link>
+
           <div className="flex gap-10 ml-20 text-[16px] font-light text-slate-700 justify-center items-center">
             <Link to="/products" className="h-min">
               Products
             </Link>
-            <p className="h-min">EarPhones</p>
-            <p className="h-min">Speakers</p>
+            <Link to="/products?category=earphones" className="h-min">
+              EarPhones
+            </Link>
+            <Link to="/products?category=speaker" className="h-min">
+              Speakers
+            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center gap-5">
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -43,12 +52,13 @@ const Header = () => {
           <input
             className="w-[250px] bg-[#EFF4F7] placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-full pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
             placeholder="Products, Items..."
-          />
+          /> */}
           <Link to="/login">
             <FaRegUser size={25} />
           </Link>
-
-          <GiShoppingBag size={25} />
+          <button onClick={() => setCartOpen(true)}>
+            <GiShoppingBag size={25} />
+          </button>
         </div>
       </div>
     </div>

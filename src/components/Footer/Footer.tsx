@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Footer = () => {
   return (
     <div className="flex justify-between p-10 bg-[#E7F0F4] mx-4 ">
@@ -20,13 +22,17 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="text-pretty text-xl mb-3">Help</p>
+        <p className=" text-xl mb-3">Help</p>
         <div>
           <p className="text-sm">Track Your Order</p>
           <p className="text-sm">Warrenty And Support</p>
           <p className="text-sm">Return Policy</p>
           <p className="text-sm">Service Center</p>
           <p className="text-sm">Bulk Orders</p>
+          <Link to="/admin/login">
+            {" "}
+            <p className="text-[14px]">Admin Login</p>
+          </Link>
         </div>
       </div>
       <div>

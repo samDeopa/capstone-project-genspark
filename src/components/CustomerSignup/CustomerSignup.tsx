@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { registerCustomer } from "../../services/Customer.service";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router";
+import { enqueueSnackbar } from "notistack";
 
 // const API_ENDPOINT = `${config.BASE_URL}/customers`;
 
@@ -25,6 +26,10 @@ const CustomerSignup = () => {
   const onSubmit = async (data: CustomerInput) => {
     const currdate = new Date();
     try {
+      if (data.password != data.confirmPassword) {
+        enqueueSnackbar("The passwords do not match!", { variant: "warning" });
+        return;
+      }
       console.log("Form Data:", data);
       const response = await registerCustomer({
         id: uuidv4(),
